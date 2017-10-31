@@ -1,4 +1,8 @@
-FROM centos:7
+FROM debian:jessie
+
+RUN apt-get update && apt-get -y upgrade && \
+    apt-get install -y wget libpcre3-dev build-essential libssl-dev && \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt
 
