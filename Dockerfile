@@ -1,9 +1,5 @@
 FROM centos:7
 
-RUN apt-get update && apt-get -y upgrade && \
-    apt-get install -y wget libpcre3-dev build-essential libssl-dev && \
-    rm -rf /var/lib/apt/lists/*
-
 WORKDIR /opt
 
 RUN wget http://nginx.org/download/nginx-1.13.5.tar.gz && \
